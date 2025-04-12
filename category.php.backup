@@ -1,0 +1,177 @@
+<style>
+    /* Ciemny motyw */
+    .dark-theme .section-tools {
+        background-color: #1a1a1a;
+    }
+
+    .dark-theme .filter-options {
+        border-bottom-color: #333;
+    }
+
+    .dark-theme .filter-group span {
+        color: #b0b0b0;
+    }
+
+    .dark-theme .form-select {
+        background-color: #2a2a2a;
+        border-color: #333;
+        color: #e0e0e0;
+    }
+
+    .dark-theme .view-btn {
+        background-color: #2a2a2a;
+        border-color: #333;
+        color: #b0b0b0;
+    }
+
+    .dark-theme .view-btn.active {
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+
+    .dark-theme .no-tools p {
+        color: #b0b0b0;
+    }
+
+    .dark-theme .section-related {
+        background-color: #222;
+    }
+
+    .dark-theme .section-related .section-header h2 {
+        color: #e0e0e0;
+    }
+
+    .dark-theme .related-category-card {
+        background-color: #2a2a2a;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .dark-theme .related-category-info h3 {
+        color: #e0e0e0;
+    }
+
+    .dark-theme .related-category-link {
+        background-color: #333;
+        color: #b0b0b0;
+    }
+
+    .dark-theme .related-category-link:hover {
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Translation variables for JavaScript
+        const translations = {
+            popularity: '<?php echo __('popularity'); ?>',
+            rating: '<?php echo __('rating'); ?>',
+            newest: '<?php echo __('newest'); ?>',
+            oldest: '<?php echo __('oldest'); ?>',
+            grid_view: '<?php echo __('grid_view'); ?>',
+            list_view: '<?php echo __('list_view'); ?>'
+        };
+
+        const gridViewBtn = document.querySelector('.grid-view');
+        const listViewBtn = document.querySelector('.list-view');
+        const toolsContainer = document.querySelector('.tools-grid');
+        const sortFilter = document.getElementById('sort-filter');
+
+        // Update select options with translations
+        if (sortFilter) {
+            // Preserve selected value if any
+            const selectedValue = sortFilter.value;
+
+            // Clear and rebuild options
+            sortFilter.innerHTML = '';
+
+            // Add translated options
+            const options = [
+                { value: 'popularity', text: translations.popularity },
+                { value: 'rating', text: translations.rating },
+                { value: 'newest', text: translations.newest },
+                { value: 'oldest', text: translations.oldest }
+            ];
+
+            options.forEach(option => {
+                const optElement = document.createElement('option');
+                optElement.value = option.value;
+                optElement.textContent = option.text;
+                if (option.value === selectedValue) {
+                    optElement.selected = true;
+                }
+                sortFilter.appendChild(optElement);
+            });
+        }
+
+        // Handle view toggle with localStorage
+        if (gridViewBtn && listViewBtn && toolsContainer) {
+            // Load saved view mode from localStorage
+            const savedViewMode = localStorage.getItem('categoryViewMode');
+
+            // Apply saved view mode if exists
+            if (savedViewMode === 'list') {
+                toolsContainer.classList.remove('tools-grid');
+                toolsContainer.classList.add('tools-list');
+                listViewBtn.classList.add('active');
+                gridViewBtn.classList.remove('active');
+            } else {
+                // Default is grid view
+                toolsContainer.classList.remove('tools-list');
+                toolsContainer.classList.add('tools-grid');
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+            }
+
+            // Set up click handlers
+            gridViewBtn.addEventListener('click', function() {
+                toolsContainer.classList.remove('tools-list');
+                toolsContainer.classList.add('tools-grid');
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+                localStorage.setItem('categoryViewMode', 'grid');
+            });
+
+            listViewBtn.addEventListener('click', function() {
+                toolsContainer.classList.remove('tools-grid');
+                toolsContainer.classList.add('tools-list');
+                listViewBtn.classList.add('active');
+                gridViewBtn.classList.remove('active');
+                localStorage.setItem('categoryViewMode', 'list');
+            });
+        }
+
+        // Handle sorting
+        if (sortFilter) {
+            sortFilter.addEventListener('change', function() {
+                const value = this.value;
+                const toolCards = Array.from(document.querySelectorAll('.tool-card'));
+
+                toolCards.sort((a, b) => {
+                    if (value === 'rating') {
+                        const ratingA = parseFloat(a.querySelector('.rating-value').textContent) || 0;
+                        const ratingB = parseFloat(b.querySelector('.rating-value').textContent) || 0;
+                        return ratingB - ratingA;
+                    } else if (value === 'popularity') {
+                        const viewsA = parseInt(a.querySelector('.upvotes-count').textContent) || 0;
+                        const viewsB = parseInt(b.querySelector('.upvotes-count').textContent) || 0;
+                        return viewsB - viewsA;
+                    } else if (value === 'newest') {
+                        const dateA = new Date(a.dataset.created || 0);
+                        const dateB = new Date(b.dataset.created || 0);
+                        return dateB - dateA;
+                    } else if (value === 'oldest') {
+                        const dateA = new Date(a.dataset.created || 0);
+                        const dateB = new Date(b.dataset.created || 0);
+                        return dateA - dateB;
+                    }
+                    return 0;
+                });
+
+                const parent = toolsContainer;
+                toolCards.forEach(card => parent.appendChild(card));
+            });
+        }
+    });
+</script>

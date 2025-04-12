@@ -1,0 +1,355 @@
+<?php
+/**
+ * Polish Language File
+ */
+
+$lang = [
+    // General
+    'site_title' => 'AITools - Najlepszy Katalog Narzędzi AI',
+    'site_description' => 'Odkryj Najlepszy Katalog Stron i Narzędzi AI',
+    'direction' => 'ltr',
+    'icon' => 'ikona',
+    'logo' => 'logo',
+
+    // Navigation
+    'home' => 'Strona główna',
+    'categories' => 'Kategorie',
+    'all_tools' => 'Wszystkie narzędzia',
+    'submit' => 'Zgłoś',
+    'about' => 'O nas',
+    'login' => 'Logowanie',
+    'signup' => 'Rejestracja',
+    'logout' => 'Wyloguj',
+    'profile' => 'Profil',
+    'favorites' => 'Ulubione',
+    'dashboard' => 'Panel',
+    'search_placeholder' => 'Szukaj narzędzi AI po słowie kluczowym',
+    'language' => 'Język',
+    'theme' => 'Motyw',
+    'dark_mode' => 'Ciemny motyw',
+    'light_mode' => 'Jasny motyw',
+    'featured' => 'Polecane',
+    'new' => 'Nowość',
+    'visit_website' => 'Odwiedź stronę',
+    'share' => 'Udostępnij',
+    'share_this_tool' => 'Udostępnij to narzędzie',
+    'related_tools' => 'Podobne narzędzia',
+    'category' => 'Kategoria',
+
+    // Hero Section
+    'hero_title' => 'Odkryj Najlepsze Strony i Narzędzia AI',
+    'hero_description' => 'Znajdź idealne narzędzia AI do swoich potrzeb z naszego obszernego katalogu %s+ narzędzi AI i GPT.',
+    'ai_tools' => 'Narzędzia AI',
+    'ai_categories' => 'Kategorie',
+    'daily_updates' => 'Codzienne aktualizacje',
+
+    // Category Tags
+    'all' => 'Wszystkie',
+
+    // Tags
+    'tag_image_generation' => 'Generowanie obrazów',
+    'tag_voice_assistant' => 'Asystent głosowy',
+    'tag_text_to_speech' => 'Tekst na mowę',
+    'tag_content_writer' => 'Tworzenie treści',
+    'tag_code_assistant' => 'Asystent kodowania',
+    'tag_summarization' => 'Podsumowywanie',
+    'tag_translation' => 'Tłumaczenie',
+    'tag_data_analysis' => 'Analiza danych',
+    'tag_video_generation' => 'Generowanie wideo',
+    'tag_music' => 'Muzyka',
+    'tag_automation' => 'Automatyzacja',
+    'tag_marketing' => 'Marketing',
+    'tag_customer_service' => 'Obsługa klienta',
+    'tag_productivity' => 'Produktywność',
+    'tag_education' => 'Edukacja',
+    'tag_healthcare' => 'Ochrona zdrowia',
+    'tag_finance' => 'Finanse',
+    'tag_business' => 'Biznes',
+
+    // Featured Tools Section
+    'featured_tools' => 'Polecane Narzędzia AI',
+    'featured_tools_description' => 'Odkryj najlepsze narzędzia AI wybrane przez naszych ekspertów',
+    'view_all' => 'Zobacz wszystkie',
+    'view_all_tools' => 'Zobacz wszystkie narzędzia',
+    'view_details' => 'Zobacz szczegóły',
+    'search' => 'Szukaj',
+
+    // New Tools Section
+    'new_tools' => 'Właśnie wydane',
+    'new_launches' => 'Nowe Narzędzia AI',
+    'new_launches_description' => 'Poznaj najnowsze narzędzia AI dodane do naszego katalogu',
+
+    // Newsletter
+    'newsletter_title' => 'Bądź na bieżąco',
+    'newsletter_description' => 'Zapisz się do naszego newslettera, aby otrzymywać najnowsze informacje o narzędziach AI',
+    'newsletter_placeholder' => 'Twój adres email',
+
+    // Tool Cards
+    'featured' => 'Polecane',
+    'new' => 'Nowe',
+    'visit' => 'Odwiedź',
+    'details' => 'Szczegóły',
+    'upvote' => 'Głosuj',
+    'upvoted' => 'Zagłosowano',
+
+    // Tool Detail
+    'description' => 'Opis',
+    'key_features' => 'Główne funkcje',
+    'feature_placeholder_1' => 'Zaawansowana technologia AI',
+    'feature_placeholder_2' => 'Łatwy w obsłudze interfejs',
+    'feature_placeholder_3' => 'Regularne aktualizacje i ulepszenia',
+
+    // Opcje cenowe
+    'pricing' => 'Cennik',
+    'free' => 'Darmowe',
+    'freemium' => 'Freemium',
+    'paid' => 'Płatne',
+    'contact_for_pricing' => 'Kontakt w sprawie ceny',
+    'unknown' => 'Nieznane',
+
+    // Ratings & Reviews
+    'reviews_and_ratings' => 'Oceny i opinie',
+    'ratings' => 'ocen',
+    'rate_this_tool' => 'Oceń to narzędzie',
+    'your_current_rating' => 'Twoja obecna ocena',
+    'your_rating' => 'Twoja ocena',
+    'rating_error' => 'Wystąpił błąd podczas dodawania oceny',
+    'rate' => 'Oceń',
+    'user_reviews' => 'Opinie użytkowników',
+    'loading_reviews' => 'Ładowanie opinii...',
+    'no_reviews_yet' => 'Brak opinii dla tego narzędzia',
+    'error_loading_reviews' => 'Wystąpił błąd podczas ładowania opinii',
+    'write_review' => 'Napisz opinię',
+    'review_title' => 'Tytuł opinii',
+    'review_title_placeholder' => 'Podsumowanie twojej opinii (opcjonalnie)',
+    'review_content' => 'Treść opinii',
+    'review_content_placeholder' => 'Opisz swoje doświadczenia z tym narzędziem...',
+    'submit_review' => 'Dodaj opinię',
+    'review_content_required' => 'Treść opinii jest wymagana',
+    'review_submission_error' => 'Wystąpił błąd podczas dodawania opinii',
+    'login_to_review' => 'Zaloguj się, aby dodać opinię',
+    'anonymous' => 'Anonim',
+    'submitting' => 'Wysyłanie...',
+
+    // Search & Results
+    'try_another' => 'Spróbuj inne wyszukiwanie...',
+    'no_featured_tools' => 'Brak polecanych narzędzi w tym momencie.',
+    'no_new_tools' => 'Brak nowych narzędzi w tym momencie.',
+    'no_categories' => 'Brak dostępnych kategorii w tym momencie.',
+
+    // API Messages
+    'invalid_tool_id' => 'Nieprawidłowy identyfikator narzędzia',
+    'rating_range_error' => 'Ocena musi być od 1 do 5',
+    'rating_updated' => 'Twoja ocena została zaktualizowana',
+    'rating_update_error' => 'Nie udało się zaktualizować oceny: %s',
+    'rating_saved' => 'Twoja ocena została zapisana',
+    'rating_save_error' => 'Nie udało się zapisać oceny: %s',
+    'rating_count_error' => 'Nie udało się pobrać liczby ocen: %s',
+    'tool_not_found' => 'Narzędzie nie zostało znalezione',
+    'invalid_request_method' => 'Nieprawidłowa metoda żądania',
+    'review_already_submitted' => 'Już dodałeś recenzję dla tego narzędzia',
+    'review_added' => 'Twoja recenzja została dodana i oczekuje na zatwierdzenie',
+    'review_add_error' => 'Nie udało się dodać recenzji: %s',
+    'login_required_for_review' => 'Musisz być zalogowany, aby dodać recenzję',
+    'reviews_fetch_error' => 'Nie udało się pobrać recenzji: %s',
+    'upvote_recorded' => 'Głos został zarejestrowany pomyślnie',
+    'upvote_error' => 'Nie udało się zarejestrować głosu: %s',
+    'vote_process_error' => 'Nie udało się przetworzyć Twojego głosu. Spróbuj ponownie.',
+
+    // New generic errors
+    'subscription_failed_generic' => 'Subskrypcja nie powiodła się. Spróbuj ponownie.',
+    'general_error' => 'Wystąpił błąd. Spróbuj ponownie później.',
+
+    // Tags related
+    'tag_added' => 'Tag został dodany do narzędzia',
+    'tag_removed' => 'Tag został usunięty z narzędzia',
+    'tag_add_error' => 'Wystąpił błąd podczas dodawania tagu',
+    'tag_remove_error' => 'Wystąpił błąd podczas usuwania tagu',
+    'invalid_action' => 'Nieprawidłowa akcja',
+    'tags' => 'Tagi',
+    'add_tag' => 'Dodaj tag',
+    'remove_tag' => 'Usuń tag',
+    'max_tags_reached' => 'Osiągnięto maksymalną liczbę tagów (3)',
+
+    // Favorites
+    'add_to_favorites' => 'Dodaj do ulubionych',
+    'remove_from_favorites' => 'Usuń z ulubionych',
+    'added_to_favorites' => 'Dodano do ulubionych',
+    'removed_from_favorites' => 'Usunięto z ulubionych',
+    'favorites_error' => 'Wystąpił błąd z ulubionymi: %s',
+    'favorites_error_generic' => 'Wystąpił błąd podczas przetwarzania ulubionych',
+    'login_required_for_favorites' => 'Musisz być zalogowany, aby dodać narzędzie do ulubionych',
+    'login_required_for_upvote' => 'Musisz być zalogowany, aby głosować',
+    'login_required_for_rating' => 'Musisz być zalogowany, aby ocenić narzędzie',
+    'already_upvoted' => 'Już zagłosowałeś na to narzędzie',
+
+    // CTA Section
+    'cta_title' => 'Masz Narzędzie AI do udostępnienia?',
+    'cta_description' => 'Zgłoś swoje narzędzie AI do naszego katalogu i zostań odkryty przez tysiące użytkowników szukających innowacyjnych rozwiązań AI.',
+    'submit_tool' => 'Zgłoś swoje narzędzie',
+
+    // Categories Page
+    'browse_categories_title' => 'Przeglądaj Narzędzia AI według Kategorii',
+    'browse_categories_description' => 'Znajdź idealne narzędzie AI do swoich potrzeb, przeglądając nasz katalog według kategorii.',
+    'explore' => 'Eksploruj',
+    'tools' => 'Narzędzia',
+
+    // Categories and Subcategories
+    'subcategories' => 'Podkategorie',
+    'main_category' => 'Kategoria główna',
+    'parent_category' => 'Kategoria nadrzędna',
+    'all_categories' => 'Wszystkie kategorie',
+    'browse_subcategories' => 'Przeglądaj podkategorie',
+
+    // Popular Tags Section
+    'popular_topics' => 'Popularne Tematy AI',
+    'explore_trending' => 'Odkryj trendy w tematyce AI',
+
+    // Category Details Page
+    'sort_by' => 'Sortuj według:',
+    'popularity' => 'Popularność',
+    'rating' => 'Ocena',
+    'newest' => 'Najnowsze',
+    'oldest' => 'Najstarsze',
+    'grid_view' => 'Widok siatki',
+    'list_view' => 'Widok listy',
+    'no_tools_category' => 'Nie znaleziono narzędzi w tej kategorii.',
+    'back_to_categories' => 'Powrót do kategorii',
+    'explore_other' => 'Odkryj inne kategorie',
+    'price_low_to_high' => 'Cena: od najniższej',
+    'price_high_to_low' => 'Cena: od najwyższej',
+
+    // Search Page
+    'search_results' => 'Wyniki wyszukiwania',
+    'search_results_for' => 'Wyniki wyszukiwania dla "%s"',
+    'search_empty' => 'Wprowadź słowo kluczowe, aby znaleźć narzędzia AI.',
+    'no_results' => 'Nie znaleziono narzędzi pasujących do "%s".',
+    'search_suggestions' => 'Sugestie:',
+    'check_spelling' => 'Sprawdź pisownię',
+    'try_general' => 'Spróbuj bardziej ogólnych słów kluczowych',
+    'try_different' => 'Spróbuj innych słów kluczowych',
+    'browse_by_categories' => 'Przeglądaj wszystkie narzędzia według kategorii',
+    'found_tools' => 'Znaleziono %s narzędzie',
+    'found_tools_plural' => 'Znaleziono %s narzędzi',
+    'matching' => 'pasujących do "%s"',
+    'refine_search' => 'Doprecyzuj wyszukiwanie...',
+
+    // Submit Tool Page
+    'submit_tool_title' => 'Zgłoś swoje narzędzie AI',
+    'submit_tool_description' => 'Podziel się swoim narzędziem AI z naszą społecznością i zostań odkryty przez tysiące użytkowników szukających innowacyjnych rozwiązań AI.',
+    'tool_name' => 'Nazwa narzędzia',
+    'description' => 'Opis',
+    'description_help' => 'Podaj szczegółowy opis tego, co robi Twoje narzędzie i jego kluczowych funkcji.',
+    'website_url' => 'Adres URL strony',
+    'category' => 'Kategoria',
+    'select_category' => 'Wybierz kategorię',
+    'logo' => 'Logo',
+    'logo_help' => 'Prześlij logo swojego narzędzia (JPEG, PNG lub GIF, maks. 2MB). Zalecany rozmiar: 200x200 pikseli.',
+    'agree_terms' => 'Zgadzam się z Warunkami korzystania z usługi i Polityką prywatności.',
+    'submit_button' => 'Zgłoś narzędzie',
+    'submission_guidelines' => 'Wytyczne dotyczące zgłaszania',
+    'guideline_1' => 'Twoje narzędzie musi być związane z AI i w pełni funkcjonalne.',
+    'guideline_2' => 'Podaj dokładne i szczegółowe informacje o swoim narzędziu.',
+    'guideline_3' => 'Upewnij się, że adres URL strony jest prawidłowy i dostępny.',
+    'guideline_4' => 'Zgłoszenia mogą wymagać do 48 godzin na przegląd i publikację.',
+    'guideline_5' => 'Zastrzegamy sobie prawo do odrzucenia zgłoszeń, które nie spełniają naszych standardów.',
+    'thank_you' => 'Dziękujemy!',
+    'submission_success' => 'Twoje narzędzie zostało pomyślnie zgłoszone. Nasz zespół przejrzy je i wkrótce opublikuje.',
+    'back_to_home' => 'Powrót do strony głównej',
+    'submit_another' => 'Zgłoś kolejne narzędzie',
+
+    // Login Page
+    'login_title' => 'Zaloguj się na swoje konto',
+    'login_description' => 'Uzyskaj dostęp do swojego konta, aby zgłaszać narzędzia, zapisywać ulubione i więcej.',
+    'username' => 'Nazwa użytkownika',
+    'password' => 'Hasło',
+    'remember_me' => 'Zapamiętaj mnie',
+    'forgot_password' => 'Zapomniałeś hasła?',
+    'no_account' => 'Nie masz konta? Zarejestruj się',
+    'or' => 'LUB',
+    'login_google' => 'Zaloguj się przez Google',
+    'login_facebook' => 'Zaloguj się przez Facebook',
+
+    // Register Page
+    'register_title' => 'Utwórz konto',
+    'register_description' => 'Dołącz do naszej społeczności, aby odkrywać i udostępniać narzędzia AI z tysiącami użytkowników.',
+    'email' => 'Email',
+    'confirm_password' => 'Potwierdź hasło',
+    'username_help' => 'Nazwa użytkownika może zawierać tylko litery, cyfry i podkreślenia.',
+    'password_help' => 'Hasło musi mieć co najmniej 8 znaków.',
+    'register_button' => 'Zarejestruj się',
+    'have_account' => 'Masz już konto?',
+    'register_google' => 'Zarejestruj się przez Google',
+    'register_facebook' => 'Zarejestruj się przez Facebook',
+    'registration_success' => 'Rejestracja zakończona pomyślnie!',
+    'registration_success_message' => 'Twoje konto zostało pomyślnie utworzone. Możesz teraz zalogować się na swoje konto.',
+    'login_now' => 'Zaloguj się teraz',
+
+    // Footer
+    'about_us' => 'O nas',
+    'quick_links' => 'Szybkie linki',
+    'footer_description' => 'Odkryj Najlepszy Katalog Stron i Narzędzi AI. Nasza lista narzędzi AI i katalog są aktualizowane codziennie.',
+    'submit_tool_footer' => 'Zgłoś narzędzie',
+    'view_all_categories' => 'Zobacz wszystkie kategorie',
+    'contact_us' => 'Kontakt',
+    'newsletter' => 'Zapisz się do naszego newslettera',
+    'email_placeholder' => 'Wpisz swój email',
+    'subscribe' => 'Subskrybuj',
+    'copyright' => '&copy; %s AITools. Wszelkie prawa zastrzeżone.',
+    'privacy_policy' => 'Polityka prywatności',
+    'terms_of_service' => 'Warunki korzystania z usługi',
+
+    // Language Switcher
+    'language' => 'Język',
+    'english' => 'English',
+    'polish' => 'Polski',
+    'spanish' => 'Español',
+    'portuguese' => 'Português',
+    'russian' => 'Русский',
+
+    // Error Messages
+    'tool_name_required' => 'Nazwa narzędzia jest wymagana',
+    'description_required' => 'Opis narzędzia jest wymagany',
+    'website_url_required' => 'Adres URL strony narzędzia jest wymagany',
+    'invalid_url' => 'Nieprawidłowy adres URL strony',
+    'select_category_error' => 'Wybierz kategorię',
+    'logo_type_error' => 'Logo musi być obrazem w formacie JPEG, PNG lub GIF',
+    'logo_size_error' => 'Rozmiar logo musi być mniejszy niż 2MB',
+    'upload_failed' => 'Nie udało się przesłać logo',
+    'submit_failed' => 'Nie udało się zgłosić narzędzia: %s',
+    'username_required' => 'Nazwa użytkownika jest wymagana',
+    'password_required' => 'Hasło jest wymagane',
+    'invalid_credentials' => 'Nieprawidłowa nazwa użytkownika lub hasło',
+    'email_required' => 'Email jest wymagany',
+    'invalid_email' => 'Nieprawidłowy format email',
+    'username_length' => 'Nazwa użytkownika musi mieć od 3 do 20 znaków',
+    'username_format' => 'Nazwa użytkownika może zawierać tylko litery, cyfry i podkreślenia',
+    'password_length' => 'Hasło musi mieć co najmniej 8 znaków',
+    'passwords_mismatch' => 'Hasła nie pasują do siebie',
+    'username_exists' => 'Nazwa użytkownika już istnieje',
+    'email_exists' => 'Email już istnieje',
+    'registration_failed' => 'Nie udało się zarejestrować użytkownika: %s',
+    'already_subscribed' => 'Jesteś już subskrybentem',
+    'subscription_success' => 'Pomyślnie zasubskrybowałeś nasz newsletter',
+    'subscription_failed' => 'Nie udało się zasubskrybować: %s',
+    'email_required_newsletter' => 'Wprowadź swój adres email.',
+    'invalid_email_newsletter' => 'Nieprawidłowy format email.',
+
+    // Other
+    'cant_find' => 'Nie możesz znaleźć tego, czego szukasz?',
+    'cant_find_description' => 'Zgłoś swoje narzędzie AI do naszego katalogu lub skontaktuj się z nami, aby uzyskać pomoc w znalezieniu idealnego rozwiązania AI do Twoich potrzeb.',
+    'join_community' => 'Dołącz do naszej społeczności entuzjastów AI i bądź na bieżąco z najnowszymi narzędziami i trendami AI.',
+
+    // 404 Page
+    'page_not_found' => 'Strona nie znaleziona',
+    'page_not_found_message' => 'Strona, której szukasz, mogła zostać usunięta, jej nazwa została zmieniona lub jest tymczasowo niedostępna.',
+    'browse_categories' => 'Przeglądaj kategorie',
+
+    // Tag Page
+    'tag' => 'Tag',
+    'tools_tagged_with' => 'Narzędzia oznaczone tagiem',
+    'found_tools_count' => 'Znaleziono %s narzędzi',
+    'no_tools_found_for_tag' => 'Nie znaleziono narzędzi z tym tagiem',
+    'previous' => 'Poprzednia',
+    'next' => 'Następna',
+];

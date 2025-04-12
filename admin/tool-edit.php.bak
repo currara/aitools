@@ -1,0 +1,324 @@
+<style>
+    /* Style dla formularza edycji narzędzia */
+    .admin-form-row {
+        margin-bottom: 30px;
+    }
+
+    .admin-form-group {
+        margin-bottom: 20px;
+    }
+
+    .admin-form-label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: var(--admin-dark, #111827);
+    }
+
+    .admin-form-input,
+    .admin-form-select,
+    .admin-form-textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid var(--admin-border, #e5e7eb);
+        border-radius: 6px;
+        font-size: 0.9rem;
+        color: var(--admin-text, #4b5563);
+        background-color: var(--admin-input-bg, #fff);
+    }
+
+    .admin-form-textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .admin-form-help {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        color: var(--admin-light-text, #6b7280);
+    }
+
+    .admin-form-file-input {
+        padding: 10px 0;
+    }
+
+    .admin-tabs {
+        display: flex;
+        border-bottom: 1px solid var(--admin-border, #e5e7eb);
+        margin-bottom: 20px;
+        overflow-x: auto;
+    }
+
+    .admin-tab {
+        padding: 12px 20px;
+        font-weight: 500;
+        color: var(--admin-light-text, #6b7280);
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        transition: all 0.2s;
+        white-space: nowrap;
+    }
+
+    .admin-tab.active {
+        color: var(--admin-primary, #3b82f6);
+        border-bottom-color: var(--admin-primary, #3b82f6);
+    }
+
+    .admin-tab-content {
+        display: none;
+    }
+
+    .admin-tab-content.active {
+        display: block;
+    }
+
+    .admin-form-actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid var(--admin-border, #e5e7eb);
+    }
+
+    .language-tabs {
+        display: flex;
+        border-bottom: 1px solid var(--admin-border, #e5e7eb);
+        margin-bottom: 20px;
+        overflow-x: auto;
+    }
+
+    .language-tab {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--admin-light-text, #6b7280);
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        transition: all 0.2s;
+        white-space: nowrap;
+    }
+
+    .language-tab.active {
+        color: var(--admin-primary, #3b82f6);
+        border-bottom-color: var(--admin-primary, #3b82f6);
+    }
+
+    .language-content {
+        display: none;
+    }
+
+    .language-content.active {
+        display: block;
+    }
+
+    .image-preview {
+        border-radius: 8px;
+    }
+
+    #tool-preview {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    /* Wyszukiwarka kategorii i lista kategorii */
+    .category-search-container {
+        margin-bottom: 15px;
+    }
+
+    #category-search {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid var(--admin-border, #e5e7eb);
+        border-radius: 6px;
+        font-size: 0.9rem;
+    }
+
+    #categories-container {
+        max-height: 300px;
+        overflow-y: auto;
+        border: 1px solid var(--admin-border, #e5e7eb);
+        border-radius: 6px;
+        padding: 10px;
+    }
+
+    .category-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 10px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+    }
+
+    .category-item:hover {
+        background-color: #f9fafb;
+    }
+
+    .category-checkbox {
+        margin-right: 10px;
+    }
+
+    .subcategory {
+        margin-left: 25px;
+    }
+
+    .selected-categories {
+        background-color: #f0f7ff;
+        border: 1px solid #dcdfe4;
+        border-radius: 6px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .selected-categories-title {
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: #3b82f6;
+    }
+
+    .selected-categories-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .selected-category-item {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border: 1px solid #dcdfe4;
+        border-radius: 20px;
+        padding: 5px 12px;
+        font-size: 0.85rem;
+    }
+
+    .remove-category {
+        background: none;
+        border: none;
+        color: #9ca3af;
+        cursor: pointer;
+        margin-left: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .remove-category:hover {
+        color: #ef4444;
+    }
+
+    /* Dark theme */
+    .dark-theme .admin-form-label {
+        color: #e0e0e0;
+    }
+
+    .dark-theme .admin-form-input,
+    .dark-theme .admin-form-select,
+    .dark-theme .admin-form-textarea {
+        background-color: #2a2a2a;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+
+    .dark-theme .admin-form-help {
+        color: #9ca3af;
+    }
+
+    .dark-theme .admin-tabs,
+    .dark-theme .language-tabs {
+        border-bottom-color: #444;
+    }
+
+    .dark-theme .admin-tab,
+    .dark-theme .language-tab {
+        color: #9ca3af;
+    }
+
+    .dark-theme .admin-tab.active,
+    .dark-theme .language-tab.active {
+        color: #81a9ff;
+        border-bottom-color: #81a9ff;
+    }
+
+    .dark-theme .admin-form-actions {
+        border-top-color: #444;
+    }
+
+    .dark-theme #tool-preview {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .dark-theme #preview-name {
+        color: #e0e0e0;
+    }
+
+    .dark-theme #preview-description {
+        color: #9ca3af;
+    }
+
+    .dark-theme .category-item:hover {
+        background-color: #333;
+    }
+
+    .dark-theme .selected-categories {
+        background-color: #1a2234;
+        border-color: #344;
+    }
+
+    .dark-theme .selected-categories-title {
+        color: #81a9ff;
+    }
+
+    .dark-theme .selected-category-item {
+        background-color: #2a2a2a;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+
+    .dark-theme #category-search {
+        background-color: #2a2a2a;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+
+    .dark-theme #categories-container {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .dark-theme .category-item {
+        color: #e0e0e0;
+    }
+
+    .dark-theme .tiptap-editor {
+        background-color: #2a2a2a;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+
+    .dark-theme .tiptap-toolbar {
+        background-color: #333;
+        border-color: #444;
+    }
+
+    .dark-theme .tiptap-toolbar button {
+        background-color: #2a2a2a;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+
+    .dark-theme .tiptap-toolbar button:hover {
+        background-color: #3a3a3a;
+    }
+
+    .dark-theme .tiptap-toolbar button.is-active {
+        background-color: #4a4a4a;
+        color: #81a9ff;
+    }
+</style>
+
+<!-- Dodaj TipTap zamiast QuillJS -->

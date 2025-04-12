@@ -1,0 +1,338 @@
+<?php
+/**
+ * English Language File
+ */
+
+$lang = [
+    // General
+    'site_title' => 'AITools - Best AI Tools Directory',
+    'site_description' => 'Discover The Best AI Websites & Tools Directory',
+    'direction' => 'ltr',
+    'icon' => 'icon',
+    'logo' => 'logo',
+
+    // Navigation
+    'home' => 'Home',
+    'categories' => 'Categories',
+    'all_tools' => 'All Tools',
+    'submit' => 'Submit',
+    'about' => 'About',
+    'login' => 'Login',
+    'signup' => 'Sign Up',
+    'dashboard' => 'Dashboard',
+    'profile' => 'Profile',
+    'favorites' => 'Favorites',
+    'logout' => 'Logout',
+    'language' => 'Language',
+    'search_placeholder' => 'Search AI tools by keyword',
+    'theme' => 'Theme',
+    'dark_mode' => 'Dark mode',
+    'light_mode' => 'Light mode',
+    'featured' => 'Featured',
+    'new' => 'New',
+    'visit_website' => 'Visit website',
+
+    // Hero Section
+    'hero_title' => 'Discover The Best AI Websites & Tools',
+    'hero_description' => 'Find the perfect AI tools for your needs from our extensive directory of %s+ AI tools and GPTs.',
+    'ai_tools' => 'AI Tools',
+    'ai_categories' => 'Categories',
+    'daily_updates' => 'Daily Updates',
+
+    // Category Tags
+    'all' => 'All',
+
+    // Tags
+    'tag_image_generation' => 'Image Generation',
+    'tag_voice_assistant' => 'Voice Assistant',
+    'tag_text_to_speech' => 'Text to Speech',
+    'tag_content_writer' => 'Content Writer',
+    'tag_code_assistant' => 'Code Assistant',
+    'tag_summarization' => 'Summarization',
+    'tag_translation' => 'Translation',
+    'tag_data_analysis' => 'Data Analysis',
+    'tag_video_generation' => 'Video Generation',
+    'tag_music' => 'Music',
+    'tag_automation' => 'Automation',
+    'tag_marketing' => 'Marketing',
+    'tag_customer_service' => 'Customer Service',
+    'tag_productivity' => 'Productivity',
+    'tag_education' => 'Education',
+    'tag_healthcare' => 'Healthcare',
+    'tag_finance' => 'Finance',
+    'tag_business' => 'Business',
+
+    // Featured Tools Section
+    'featured_tools' => 'Featured AI Tools',
+    'featured_tools_description' => 'Discover the best AI tools curated by our experts',
+    'view_all' => 'View All',
+    'view_all_tools' => 'View All Tools',
+    'view_details' => 'View Details',
+    'search' => 'Search',
+
+    // New Tools Section
+    'new_tools' => 'Just Launched',
+    'new_launches' => 'New AI Tools',
+    'new_launches_description' => 'Explore the latest AI tools added to our directory',
+
+    // Newsletter Section
+    'newsletter_title' => 'Stay Updated',
+    'newsletter_description' => 'Subscribe to our newsletter to receive the latest updates on AI tools',
+    'newsletter_placeholder' => 'Your email address',
+
+    // Tool Cards
+    'featured' => 'Featured',
+    'new' => 'New',
+    'visit' => 'Visit',
+    'details' => 'Details',
+    'upvote' => 'Upvote',
+    'upvoted' => 'Upvoted',
+
+    // Tool Detail
+    'description' => 'Description',
+    'key_features' => 'Key Features',
+    'feature_placeholder_1' => 'Advanced AI technology',
+    'feature_placeholder_2' => 'Easy to use interface',
+    'feature_placeholder_3' => 'Regular updates and improvements',
+
+    // Pricing Options
+    'pricing' => 'Pricing',
+    'free' => 'Free',
+    'freemium' => 'Freemium',
+    'paid' => 'Paid',
+    'contact_for_pricing' => 'Contact for Pricing',
+    'unknown' => 'Unknown',
+    'visit_website' => 'Visit Website',
+    'share' => 'Share',
+    'share_this_tool' => 'Share this Tool',
+    'related_tools' => 'Related Tools',
+    'category' => 'Category',
+
+    // Ratings & Reviews
+    'reviews_and_ratings' => 'Reviews and Ratings',
+    'ratings' => 'ratings',
+    'rate_this_tool' => 'Rate this Tool',
+    'rating_error' => 'An error occurred while adding your rating',
+    'user_reviews' => 'User Reviews',
+    'loading_reviews' => 'Loading reviews...',
+    'no_reviews_yet' => 'No reviews for this tool yet',
+    'error_loading_reviews' => 'An error occurred while loading reviews',
+    'write_review' => 'Write a Review',
+    'review_title' => 'Review Title',
+    'review_title_placeholder' => 'Summarize your review (optional)',
+    'review_content' => 'Review Content',
+    'review_content_placeholder' => 'Describe your experience with this tool...',
+    'submit_review' => 'Submit Review',
+    'review_content_required' => 'Review content is required',
+    'review_submission_error' => 'An error occurred while submitting your review',
+    'login_to_review' => 'Log in to add a review',
+    'anonymous' => 'Anonymous',
+    'submitting' => 'Submitting...',
+
+    // Search & Results
+    'try_another' => 'Try another search...',
+    'no_featured_tools' => 'No featured tools available at the moment.',
+    'no_new_tools' => 'No newly launched tools available at the moment.',
+    'no_categories' => 'No categories available at the moment.',
+
+    // API Messages
+    'invalid_tool_id' => 'Invalid tool ID',
+    'rating_range_error' => 'Rating must be between 1 and 5',
+    'rating_updated' => 'Your rating has been updated',
+    'rating_update_error' => 'Failed to update rating: %s',
+    'rating_saved' => 'Your rating has been saved',
+    'rating_save_error' => 'Failed to save rating: %s',
+    'rating_count_error' => 'Failed to get rating count: %s',
+    'tool_not_found' => 'Tool not found',
+    'invalid_request_method' => 'Invalid request method',
+    'review_already_submitted' => 'You have already submitted a review for this tool',
+    'review_added' => 'Your review has been added and is awaiting approval',
+    'review_add_error' => 'Failed to add review: %s',
+    'login_required_for_review' => 'You must be logged in to add a review',
+    'reviews_fetch_error' => 'Failed to fetch reviews: %s',
+    'upvote_recorded' => 'Upvote recorded successfully',
+    'upvote_error' => 'Failed to record upvote: %s',
+
+    // Favorites
+    'add_to_favorites' => 'Add to Favorites',
+    'remove_from_favorites' => 'Remove from Favorites',
+    'added_to_favorites' => 'Added to favorites',
+    'removed_from_favorites' => 'Removed from favorites',
+    'favorites_error' => 'Error with favorites: %s',
+    'favorites_error_generic' => 'An error occurred while processing favorites',
+    'login_required_for_favorites' => 'You must be logged in to add a tool to favorites',
+    'login_required_for_upvote' => 'You must be logged in to upvote',
+    'already_upvoted' => 'You have already upvoted this tool',
+
+    // CTA Section
+    'cta_title' => 'Have an AI Tool to Share?',
+    'cta_description' => 'Submit your AI tool to our directory and get discovered by thousands of users looking for innovative AI solutions.',
+    'submit_tool' => 'Submit Your Tool',
+
+    // Categories Page
+    'browse_categories_title' => 'Browse AI Tools by Categories',
+    'browse_categories_description' => 'Find the perfect AI tool for your needs by exploring our categorized directory.',
+    'explore' => 'Explore',
+    'tools' => 'Tools',
+
+    // Popular Tags Section
+    'popular_topics' => 'Popular AI Topics',
+    'explore_trending' => 'Explore trending topics in AI',
+
+    // Category Details Page
+    'sort_by' => 'Sort by',
+    'popularity' => 'Popularity',
+    'rating' => 'Rating',
+    'newest' => 'Newest',
+    'oldest' => 'Oldest',
+    'grid_view' => 'Grid View',
+    'list_view' => 'List View',
+    'no_tools_category' => 'No tools found in this category.',
+    'back_to_categories' => 'Back to Categories',
+    'explore_other' => 'Explore Other Categories',
+    'price_low_to_high' => 'Price: Low to High',
+    'price_high_to_low' => 'Price: High to Low',
+
+    // Search Page
+    'search_results' => 'Search Results',
+    'search_results_for' => 'Search Results for "%s"',
+    'search_empty' => 'Please enter a search term to find AI tools.',
+    'no_results' => 'No tools found matching "%s".',
+    'search_suggestions' => 'Suggestions:',
+    'check_spelling' => 'Check your spelling',
+    'try_general' => 'Try more general keywords',
+    'try_different' => 'Try different keywords',
+    'browse_by_categories' => 'Browse all tools by categories',
+    'found_tools' => 'Found %s tool',
+    'found_tools_plural' => 'Found %s tools',
+    'matching' => 'matching "%s"',
+    'refine_search' => 'Refine your search...',
+
+    // Submit Tool Page
+    'submit_tool_title' => 'Submit Your AI Tool',
+    'submit_tool_description' => 'Share your AI tool with our community and get discovered by thousands of users looking for innovative AI solutions.',
+    'tool_name' => 'Tool Name',
+    'description' => 'Description',
+    'description_help' => 'Provide a detailed description of what your tool does and its key features.',
+    'website_url' => 'Website URL',
+    'category' => 'Category',
+    'select_category' => 'Select a category',
+    'logo' => 'Logo',
+    'logo_help' => 'Upload a logo for your tool (JPEG, PNG, or GIF, max 2MB). Recommended size: 200x200 pixels.',
+    'agree_terms' => 'I agree to the Terms of Service and Privacy Policy.',
+    'submit_button' => 'Submit Tool',
+    'submission_guidelines' => 'Submission Guidelines',
+    'guideline_1' => 'Your tool must be AI-related and fully functional.',
+    'guideline_2' => 'Provide accurate and detailed information about your tool.',
+    'guideline_3' => 'Make sure your website URL is valid and accessible.',
+    'guideline_4' => 'Submissions may take up to 48 hours to be reviewed and published.',
+    'guideline_5' => 'We reserve the right to reject submissions that do not meet our standards.',
+    'thank_you' => 'Thank You!',
+    'submission_success' => 'Your tool has been submitted successfully. Our team will review it and publish it soon.',
+    'back_to_home' => 'Back to Home',
+    'submit_another' => 'Submit Another Tool',
+
+    // Login Page
+    'login_title' => 'Login to Your Account',
+    'login_description' => 'Access your account to submit tools, save favorites, and more.',
+    'username' => 'Username',
+    'password' => 'Password',
+    'remember_me' => 'Remember me',
+    'forgot_password' => 'Forgot password?',
+    'no_account' => 'Don\'t have an account? Register',
+    'or' => 'OR',
+    'login_google' => 'Login with Google',
+    'login_facebook' => 'Login with Facebook',
+
+    // Register Page
+    'register_title' => 'Create an Account',
+    'register_description' => 'Join our community to discover and share AI tools with thousands of users.',
+    'email' => 'Email',
+    'confirm_password' => 'Confirm Password',
+    'username_help' => 'Username can only contain letters, numbers, and underscores.',
+    'password_help' => 'Password must be at least 8 characters long.',
+    'register_button' => 'Register',
+    'have_account' => 'Already have an account?',
+    'register_google' => 'Register with Google',
+    'register_facebook' => 'Register with Facebook',
+    'registration_success' => 'Registration Successful!',
+    'registration_success_message' => 'Your account has been created successfully. You can now login to your account.',
+    'login_now' => 'Login Now',
+
+    // Footer
+    'about_us' => 'About Us',
+    'quick_links' => 'Quick Links',
+    'footer_description' => 'Discover The Best AI Websites & Tools Directory. Our AI tools list and directory are updated daily.',
+    'submit_tool_footer' => 'Submit Tool',
+    'view_all_categories' => 'View All Categories',
+    'contact_us' => 'Contact Us',
+    'newsletter' => 'Subscribe to Our Newsletter',
+    'email_placeholder' => 'Enter your email',
+    'subscribe' => 'Subscribe',
+    'copyright' => '&copy; %s AITools. All Rights Reserved.',
+    'privacy_policy' => 'Privacy Policy',
+    'terms_of_service' => 'Terms of Service',
+
+    // Language Switcher
+    'english' => 'English',
+    'polish' => 'Polski',
+    'spanish' => 'Español',
+    'portuguese' => 'Português',
+    'russian' => 'Русский',
+
+    // Error Messages
+    'tool_name_required' => 'Tool name is required',
+    'description_required' => 'Tool description is required',
+    'website_url_required' => 'Tool website URL is required',
+    'invalid_url' => 'Invalid website URL',
+    'select_category_error' => 'Please select a category',
+    'logo_type_error' => 'Logo must be a JPEG, PNG, or GIF image',
+    'logo_size_error' => 'Logo size must be less than 2MB',
+    'upload_failed' => 'Failed to upload logo',
+    'submit_failed' => 'Failed to submit tool: %s',
+    'username_required' => 'Username is required',
+    'password_required' => 'Password is required',
+    'invalid_credentials' => 'Invalid username or password',
+    'email_required' => 'Email is required',
+    'invalid_email' => 'Invalid email format',
+    'username_length' => 'Username must be between 3 and 20 characters',
+    'username_format' => 'Username can only contain letters, numbers, and underscores',
+    'password_length' => 'Password must be at least 8 characters',
+    'passwords_mismatch' => 'Passwords do not match',
+    'username_exists' => 'Username already exists',
+    'email_exists' => 'Email already exists',
+    'registration_failed' => 'Failed to register user: %s',
+    'already_subscribed' => 'You are already subscribed',
+    'subscription_success' => 'You have successfully subscribed to our newsletter',
+    'subscription_failed' => 'Failed to subscribe: %s',
+    'email_required_newsletter' => 'Please enter your email address.',
+    'invalid_email_newsletter' => 'Invalid email format.',
+
+    // Other
+    'cant_find' => 'Can\'t Find What You\'re Looking For?',
+    'cant_find_description' => 'Submit your AI tool to our directory or contact us for assistance in finding the perfect AI solution for your needs.',
+    'join_community' => 'Join our community of AI enthusiasts and stay updated with the latest AI tools and trends.',
+
+    // 404 Page
+    'page_not_found' => 'Page Not Found',
+    'page_not_found_message' => 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.',
+    'browse_categories' => 'Browse Categories',
+
+    // Error Messages related to Tags
+    'tag_added' => 'Tag added to the tool',
+    'tag_removed' => 'Tag removed from the tool',
+    'tag_add_error' => 'Error adding tag',
+    'tag_remove_error' => 'Error removing tag',
+    'invalid_action' => 'Invalid action',
+    'tags' => 'Tags',
+    'add_tag' => 'Add tag',
+    'remove_tag' => 'Remove tag',
+    'max_tags_reached' => 'Maximum number of tags reached (3)',
+
+    // Categories and Subcategories
+    'subcategories' => 'Subcategories',
+    'main_category' => 'Main Category',
+    'parent_category' => 'Parent Category',
+    'all_categories' => 'All Categories',
+    'browse_subcategories' => 'Browse Subcategories',
+];

@@ -1,0 +1,327 @@
+/* Style dla kart narzędzi z uwzględnieniem różnych typów obrazów */
+
+.tool-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style dla zrzutów ekranu - na górze karty w proporcji 4:3 */
+.tool-card.has-screenshot .tool-screenshot {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Proporcja 4:3 */
+    overflow: hidden;
+    position: relative;
+}
+
+.tool-card.has-screenshot .tool-screenshot img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Efekt zanikania obrazu na dole */
+.tool-card.has-screenshot .tool-screenshot::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+    pointer-events: none;
+}
+
+/* Style dla ikon - mały format */
+.tool-card.has-favicon .tool-logo {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px 0;
+}
+
+.tool-card.has-favicon .tool-logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tool-card-inner {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.tool-info {
+    margin-bottom: 15px;
+}
+
+.tool-info h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.tool-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.category-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #f0f5ff;
+    color: #3b82f6;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.category-tag:hover {
+    background-color: #e0ebff;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 14px;
+    display: inline-flex;
+}
+
+.tool-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tool-rating span {
+    font-size: 14px;
+    color: #666;
+}
+
+.tool-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    margin: 0;
+}
+
+.tool-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.btn-view, .btn-visit {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.btn-view {
+    background-color: #f0f5ff;
+    color: #3b82f6;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.btn-view:hover {
+    background-color: #e0ebff;
+}
+
+.btn-visit {
+    background-color: #3b82f6;
+    color: white;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-visit:hover {
+    background-color: #2563eb;
+}
+
+.featured-badge, .new-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.featured-badge {
+    background-color: rgba(255, 193, 7, 0.9);
+    color: #333;
+}
+
+.new-badge {
+    background-color: rgba(46, 213, 115, 0.9);
+    color: white;
+}
+
+/* Dostosowanie do ciemnego motywu */
+.dark-theme .tool-card {
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .tool-card.has-screenshot .tool-screenshot::after {
+    background: linear-gradient(to bottom, rgba(42, 42, 42, 0), rgba(42, 42, 42, 0.9));
+}
+
+.dark-theme .tool-info h3 {
+    color: #e0e0e0;
+}
+
+.dark-theme .category-tag {
+    background-color: #3b3b3b;
+    color: #81a9ff;
+}
+
+.dark-theme .category-tag:hover {
+    background-color: #444;
+}
+
+.dark-theme .tool-description,
+.dark-theme .tool-rating span {
+    color: #b0b0b0;
+}
+
+.dark-theme .tool-actions {
+    border-top-color: #3a3a3a;
+}
+
+.dark-theme .btn-view {
+    background-color: #3a3a3a;
+    color: #81a9ff;
+}
+
+.dark-theme .btn-view:hover {
+    background-color: #444;
+}
+
+/* Style dla widoku listy */
+.tool-card.list-view {
+    flex-direction: row;
+    padding: 0;
+}
+
+.tool-card.list-view.has-favicon .tool-logo {
+    padding: 15px;
+    margin-right: 0;
+}
+
+.tool-card.list-view .tool-card-inner {
+    padding: 15px;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.tool-card.list-view .tool-info {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+.tool-card.list-view .tool-actions {
+    margin-left: auto;
+    padding-top: 0;
+    border-top: none;
+    flex-shrink: 0;
+}
+
+.tool-card.list-view.has-screenshot {
+    align-items: center;
+}
+
+/* Nowe style dla zrzutów ekranu w widoku listy */
+.tool-card.list-view.has-screenshot .tool-screenshot {
+    display: none; /* Ukrywamy główny zrzut ekranu w widoku listy */
+}
+
+.tool-card.list-view.has-screenshot .tool-logo {
+    display: flex;
+    padding: 10px;
+    width: 100px;
+    min-width: 100px;
+    height: 75px;
+    overflow: hidden;
+}
+
+.tool-card.list-view.has-screenshot .tool-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .tool-card.list-view {
+        flex-direction: column;
+    }
+
+    .tool-card.list-view .tool-card-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tool-card.list-view.has-screenshot .tool-logo {
+        width: 100%;
+        height: auto;
+        padding: 15px 15px 0;
+    }
+
+    .tool-card.list-view .tool-info {
+        margin-left: 0;
+        margin-bottom: 15px;
+        padding-top: 15px;
+        width: 100%;
+    }
+
+    .tool-card.list-view .tool-actions {
+        margin-left: 0;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #f0f0f0;
+        width: 100%;
+    }
+
+    .dark-theme .tool-card.list-view .tool-actions {
+        border-top-color: #3a3a3a;
+    }
+}

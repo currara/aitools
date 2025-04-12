@@ -1,0 +1,458 @@
+/*
+* Toolify - AI Tools Directory
+* Filters and List View Styles
+*/
+
+/* Filter Section Styles */
+.filter-section {
+    background-color: var(--white);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--gray-300);
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: var(--gray-700);
+    white-space: nowrap;
+}
+
+.filter-select {
+    padding: 10px 15px;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    color: var(--gray-800);
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 160px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(118, 89, 242, 0.1);
+}
+
+.view-toggle {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    color: var(--gray-700);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.view-btn i {
+    margin-right: 5px;
+}
+
+.view-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(118, 89, 242, 0.2);
+}
+
+.view-btn:hover:not(.active) {
+    background-color: var(--gray-100);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* List View Layout */
+.tools-grid.list-view-enabled {
+    display: block;
+}
+
+.tools-grid.list-view-enabled .tool-card {
+    margin-bottom: 20px;
+}
+
+.tools-grid.list-view-enabled .tool-card-inner {
+    flex-direction: row;
+    align-items: center;
+}
+
+.tools-grid.list-view-enabled .tool-logo {
+    margin-bottom: 0;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.tools-grid.list-view-enabled .tool-info {
+    margin-right: 20px;
+    flex: 1;
+}
+
+.tools-grid.list-view-enabled .tool-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tools-grid.list-view-enabled .tool-actions {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 140px;
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
+    border: 1px solid var(--gray-300);
+}
+
+.no-results p {
+    font-size: 1.2rem;
+    color: var(--gray-700);
+    margin-bottom: 20px;
+}
+
+/* Dark Theme Adjustments */
+body.dark-theme .filter-section {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+}
+
+body.dark-theme .filter-group label {
+    color: var(--dark-text-secondary);
+}
+
+body.dark-theme .filter-select {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+body.dark-theme .filter-select:focus {
+    border-color: var(--dark-primary-color);
+    box-shadow: 0 0 0 2px rgba(158, 138, 248, 0.2);
+}
+
+body.dark-theme .view-btn {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border);
+    color: var(--dark-text-secondary);
+}
+
+body.dark-theme .view-btn.active {
+    background-color: var(--dark-primary-color);
+    color: var(--dark-text-primary);
+    border-color: var(--dark-primary-color);
+}
+
+body.dark-theme .view-btn:hover:not(.active) {
+    background-color: var(--dark-hover);
+}
+
+body.dark-theme .no-results {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border);
+}
+
+body.dark-theme .no-results p {
+    color: var(--dark-text-secondary);
+}
+
+/* Pricing Type Label */
+.pricing-label {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-right: 5px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pricing-type {
+    margin-left: auto;
+}
+
+.pricing-label.free {
+    background-color: #e6f7e6;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.pricing-label.freemium {
+    background-color: #e8f4fd;
+    color: #0277bd;
+    border: 1px solid #b3e5fc;
+}
+
+.pricing-label.paid {
+    background-color: #fee9e7;
+    color: #c62828;
+    border: 1px solid #ffccbc;
+}
+
+.pricing-label.contact {
+    background-color: #ede7f6;
+    color: #512da8;
+    border: 1px solid #d1c4e9;
+}
+
+/* Dark theme */
+body.dark-theme .pricing-label.free {
+    background-color: rgba(46, 125, 50, 0.2);
+    color: #81c784;
+    border-color: rgba(46, 125, 50, 0.4);
+}
+
+body.dark-theme .pricing-label.freemium {
+    background-color: rgba(2, 119, 189, 0.2);
+    color: #64b5f6;
+    border-color: rgba(2, 119, 189, 0.4);
+}
+
+body.dark-theme .pricing-label.paid {
+    background-color: rgba(198, 40, 40, 0.2);
+    color: #e57373;
+    border-color: rgba(198, 40, 40, 0.4);
+}
+
+body.dark-theme .pricing-label.contact {
+    background-color: rgba(81, 45, 168, 0.2);
+    color: #b39ddb;
+    border-color: rgba(81, 45, 168, 0.4);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .filter-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .filter-select {
+        width: 100%;
+    }
+
+    .view-toggle {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .view-btn {
+        flex: 1;
+        text-align: center;
+    }
+
+    .tools-grid.list-view-enabled .tool-card-inner {
+        flex-direction: column;
+    }
+
+    .tools-grid.list-view-enabled .tool-logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .tools-grid.list-view-enabled .tool-info {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .tools-grid.list-view-enabled .tool-actions {
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
+/* Subcategories Styles */
+.subcategories {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+.subcategories h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--gray-700);
+}
+
+.subcategory-list {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 15px;
+}
+
+.subcategory-list li {
+    margin-bottom: 8px;
+    padding-left: 0;
+}
+
+.subcategory-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+    font-size: 13px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.subcategory-list a:hover {
+    background-color: var(--gray-200);
+    color: var(--primary-color);
+    transform: translateX(3px);
+}
+
+.subcategory-count {
+    color: var(--gray-500);
+    font-size: 12px;
+    background-color: var(--white);
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+/* Updated List View for Tools */
+.tools-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tools-list .tool-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    overflow: visible;
+}
+
+.tools-list .tool-card:hover {
+    transform: translateY(-3px);
+}
+
+.tools-list .tool-card-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.tools-list .tool-logo {
+    margin-bottom: 0;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.tools-list .tool-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.tools-list .tool-meta {
+    margin-bottom: 10px;
+}
+
+.tools-list .tool-actions {
+    padding-top: 0;
+    border-top: none;
+    display: flex;
+    gap: 10px;
+}
+
+/* Dark Theme Support */
+body.dark-theme .subcategory-list a {
+    background-color: var(--dark-hover);
+    color: var(--dark-text-secondary);
+}
+
+body.dark-theme .subcategory-list a:hover {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-primary-color);
+}
+
+body.dark-theme .subcategory-count {
+    background-color: var(--dark-surface);
+    color: var(--dark-text-secondary);
+}
+
+body.dark-theme .subcategories h4 {
+    color: var(--dark-text-primary);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 767px) {
+    .tools-list .tool-card-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tools-list .tool-logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .tools-list .tool-info {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .tools-list .tool-actions {
+        width: 100%;
+    }
+
+    .subcategory-list a {
+        padding: 8px 12px;
+    }
+}

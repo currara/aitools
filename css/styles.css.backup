@@ -1,0 +1,125 @@
+/* Footer Styles */
+.footer {
+    background-color: var(--gray-800);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.footer-col p {
+    color: var(--gray-400);
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--gray-400);
+    transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+    color: var(--white);
+}
+
+.footer-about .footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-about .footer-logo img {
+    height: 40px;
+}
+
+.footer-newsletter .newsletter-form {
+    margin-top: 20px;
+}
+
+.footer-newsletter .form-group {
+    position: relative;
+}
+
+.footer-newsletter input {
+    width: 100%;
+    padding: 10px 50px 10px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--white);
+}
+
+.footer-newsletter .btn-subscribe {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--gray-700);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom-links a {
+    color: var(--gray-400);
+    margin-left: 20px;
+    transition: var(--transition);
+}
+
+.footer-bottom-links a:hover {
+    color: var(--white);
+}
+
+/* Old styles for compatibility */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.footer-section p {
+    color: var(--gray-400);
+    margin-bottom: 20px;
+}
+
+.footer-section.about .logo {
+    margin-bottom: 20px;
+}
+
+.footer-section.about .logo img {
+    height: 40px;
+}
